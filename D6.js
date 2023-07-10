@@ -3,11 +3,11 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
-const concatString = (str1, str2) => {
+const concString = (str1, str2) => {
   return str1.slice(0, 2).concat(str2.slice(str2.length - 3));
 };
 
-console.log(concatString("Pippo", "Pluto"));
+console.log(concString("Giovanni", "Giordano"));
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
