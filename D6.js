@@ -216,28 +216,65 @@ const oldFilm = (arr) => {
   return risultato;
 };
 
-console.log("ESERCIZIO 9:", oldFilm(movies));
+console.log("ESERCIZIO 9: ", oldFilm(movies));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+const totalFilm = (array) => {
+  return array.length;
+};
+
+console.log("ESERCIZIO 10:", totalFilm(movies));
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+const titleFilm = () => {
+  const onlyTitle = [];
+  const film = movies.map((element) => onlyTitle.push(element.Title));
+  return onlyTitle;
+};
+console.log("ESERCIZIO 11:", titleFilm());
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+const films = (array) => {
+  const filterFilm = array.filter((element) => parseInt(element.Year) >= 2000);
+  return filterFilm;
+};
+
+console.log("ESERCIZIO 12:", films(movies));
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+const sumYear = (arr) => {
+  return arr.reduce((acc, curr) => acc + parseInt(curr.Year), 0);
+};
+
+console.log("ESERCIZIO 13:", sumYear(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+const findFilm = (arr, id) => {
+  return arr.find((elem) => elem.imdbID === id);
+};
+console.log("ESERCIZIO 15:", findFilm(movies, "tt0100054"));
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+const filmYear = (array, year) => {
+  return array.findIndex((elem) => parseInt(elem.Year) === year);
+};
+
+console.log("ESERCIZIO 15:", filmYear(movies, 2012));
